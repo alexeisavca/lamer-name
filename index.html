@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Lamer title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 </head>
 <body>
-
+  <script>
+    angular.module("LamerTitle", []).controller("App", function($scope){
+      $scope.adjs = ["CODE", "JAVASCRIPT", "NODEJS", "FULLSTACK", "MONGO", "MEAN STACK", "FRONTEND"];
+      $scope.nouns = ["MONKEY", "NINJA", "WIZARD", "WARLOCK", "ROCK STAR", "PORN STAR", "WARRIOR", "OVERLORD"
+        , "KHALEESI", "NOSQL", "PSYCHIC", "MAGICIAN", "DRAGON"];
+      function getRndItem(items){
+        return items[Math.floor(Math.random()*items.length)];
+      }
+      $scope.newTitle = function(){
+        $scope.title = getRndItem($scope.adjs) + " " + getRndItem($scope.nouns) + " ))))";
+      };
+      $scope.newTitle();
+    });
+  </script>
+  <div class="container" ng-app="LamerTitle">
+    <div class="col-sm-12" ng-controller="App">
+      <h1 class="page-header">Claim your lamer title now))))</h1>
+      <h2>For example...</h2>
+      <blockquote>{{title}}</blockquote>
+      <button class="btn btn-primary" ng-click="newTitle()">
+        Another one)))
+      </button>
+      <hr/>
+      Dedicated to all those obnoxious manchildren and HR cunts who happen to work in IT)))<br/>
+      Please commit suicide today))) I'll pay for the razors))))))
+    </div>
+  </div>
 </body>
 </html>
