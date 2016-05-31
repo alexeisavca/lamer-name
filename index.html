@@ -9,9 +9,10 @@
 <body>
   <script>
     angular.module("LamerTitle", []).controller("App", function($scope){
-      $scope.adjs = ["CODE", "JAVASCRIPT", "NODEJS", "FULLSTACK", "MONGO", "MEAN STACK", "FRONTEND", "NOSQL"];
+      $scope.adjs = ["CODE", "JAVASCRIPT", "NODEJS", "FULLSTACK", "MONGO", "MEAN STACK", "FRONTEND", "NOSQL", "RUBY",
+        "ROR"];
       $scope.nouns = ["MONKEY", "NINJA", "WIZARD", "WARLOCK", "ROCK STAR", "PORN STAR", "WARRIOR", "OVERLORD"
-        , "KHALEESI", "PSYCHIC", "MAGICIAN", "DRAGON", "GANGSTER", "LION", "TIGER"];
+        , "KHALEESI", "PSYCHIC", "MAGICIAN", "DRAGON", "GANGSTER", "LION", "TIGER", "ZEALOT", "FANATIC", "PSYCHO"];
       function getRndItem(items){
         return items[Math.floor(Math.random()*items.length)];
       }
